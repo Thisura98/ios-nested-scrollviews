@@ -136,10 +136,12 @@ final class OuterScroll: ScrollDisabledScrollView{
         }
     }
     
+    /**
+     Calculate the contentOffset changes for __BOTH__ scrollviews
+     by using a given pan gesture translation.
+     */
     private func calculateContentOffset(_ translation: CGFloat) -> FinalOffsetCalculation{
         guard let iScroll = Reference.iScroll else { fatalError() }
-        
-        // print("handleContentOffset inputTranslation = \(-translation)")
         
         // invert value so that it can be used as content offset
         let t = -translation
@@ -187,6 +189,10 @@ final class OuterScroll: ScrollDisabledScrollView{
 
 final class InnerScroll: ScrollDisabledScrollView{}
 
+/**
+ This class animates the scroll after the user
+ lifts their finger up.
+ */
 final fileprivate class ScrollViewScrollAnimator{
     
     typealias Handler = ((_ translation: CGFloat, _ animator: ScrollViewScrollAnimator) -> Void)
