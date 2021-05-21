@@ -1,5 +1,7 @@
 # iOS Simple Nested Scrollviews #
 
+<img src="https://github.com/Thisura98/ios-nested-scrollviews/blob/main/screencast.gif" width="300" />
+
 Nested scrollviews are problematic in `UIKit` because of the following reasons.
 1. Nested scrollview's scroll gestures are sometimes stealed by outer scrollview.
 2. Smooth scroll transition between scrollviews is not built-in.
@@ -8,18 +10,15 @@ Nested scrollviews are problematic in `UIKit` because of the following reasons.
 The proposed solution for achieving this in `UIKit` is as follows.
 1. Set the outer scrollview's class to `OuterScroll`.
 2. Set the nner scrollview's class to `InnerScroll`.
-3. Add the code, `OuterScroll.Reference.iScroll = innerScroll`
->>> `innerScroll` is an instance of `InnerScroll` in your ViewController.
+3. Add the code, `OuterScroll.Reference.iScroll = <InnerScroll instance>`
 
-Note that both `OuterScroll` and `InnerScroll` inherit from `UIScrollView`.
-
-<img src="https://github.com/Thisura98/ios-nested-scrollviews/blob/main/screencast.gif" width="300" />
+Both `OuterScroll` and `InnerScroll` inherit from `UIScrollView`.
 
 ### Usage ###
 
 #### 1. Setup two `UIScrollView`s where the nested one is inside the outer one.
 
-<img src="https://github.com/Thisura98/ios-nested-scrollviews/blob/main/ib.gif" width="500" />
+<img src="https://github.com/Thisura98/ios-nested-scrollviews/blob/main/ib.png" width="500" />
 
 #### 2. Create the relationship between Outer and Inner `UIScrollView`s
 
