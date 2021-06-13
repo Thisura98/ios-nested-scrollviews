@@ -9,7 +9,7 @@ Nested scrollviews are problematic in `UIKit` because of the following reasons.
 
 The proposed solution for achieving this in `UIKit` is as follows.
 1. Set the outer scrollview's class to `OuterScroll`.
-2. Set the nner scrollview's class to `InnerScroll`.
+2. Set the inner scrollview's class to `InnerScroll`.
 3. Add the code, `OuterScroll.Reference.iScroll = <InnerScroll instance>`
 
 Both `OuterScroll` and `InnerScroll` inherit from `UIScrollView`.
