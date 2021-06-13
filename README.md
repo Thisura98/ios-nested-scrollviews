@@ -3,7 +3,7 @@
 <img src="https://github.com/Thisura98/ios-nested-scrollviews/blob/main/screencast.gif" width="300" />
 
 Nested scrollviews are problematic in `UIKit` because of the following reasons.
-1. Nested scrollview's scroll gestures are sometimes stealed by outer scrollview.
+1. Nested scrollview's scroll gestures are sometimes 'stolen' by outer scrollview.
 2. Smooth scroll transition between scrollviews is not built-in.
 3. Fixing this requires libraries or hijacking scroll gestures in the `UIScrollViewDelegate`.
 
